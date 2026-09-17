@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F8FAFC" id="meta-theme-color">
+  <title>Parth Patel - Full Stack Developer Portfolio</title>
+  <meta name="description"
+    content="Personal portfolio website of Parth Patel, Full Stack Developer specializing in Laravel, React, Node.js, and modern web applications.">
+  <meta property="og:title" content="Parth Patel - Full Stack Developer Portfolio">
+  <meta property="og:description"
+    content="Personal portfolio website of Parth Patel, Full Stack Developer specializing in Laravel, React, Node.js, and modern web applications.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Space Grotesk, Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Google Material Symbols Outlined -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- Pure CSS3 Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Custom Cursor Elements -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-follower" aria-hidden="true"></div>
+
+  <!-- Atmospheric Background Ambient Glows -->
+  <div class="ambient-glows" aria-hidden="true">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+  </div>
+
+  <!-- Floating Island Navigation Bar -->
+  <header id="main-header" class="header">
+    <div class="header-container" id="header-container">
+      <!-- Brand Logo & Identity -->
+      <a href="#hero" class="brand" id="brand-logo" aria-label="Parth Patel Home">
+        <div class="brand-monogram" aria-hidden="true">
+          <span class="monogram-bracket">&lt;</span>
+          <span class="monogram-text">P</span>
+          <span class="monogram-slash">/</span>
+          <span class="monogram-bracket">&gt;</span>
+        </div>
+        <div class="brand-text">
+          <div class="brand-name-row">
+            <span class="brand-name">Parth Patel</span>
+            <span class="brand-verified" title="Verified Full Stack Developer">
+              <span class="material-symbols-outlined">verified</span>
+            </span>
+          </div>
+          <span class="brand-role">
+            <span class="status-dot pulse"></span>
+            <span>Available for Hire</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Floating Segmented Nav Dock -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active" id="nav-link-hero">
+          <span class="nav-link-indicator"></span>
+          <span>Home</span>
+        </a>
+        <a href="#about" class="nav-link" id="nav-link-about">
+          <span class="nav-link-indicator"></span>
+          <span>About</span>
+        </a>
+        <a href="#skills" class="nav-link" id="nav-link-skills">
+          <span class="nav-link-indicator"></span>
+          <span>Skills</span>
+        </a>
+        <a href="#services" class="nav-link" id="nav-link-services">
+          <span class="nav-link-indicator"></span>
+          <span>Services</span>
+        </a>
+        <a href="#contact" class="nav-link" id="nav-link-contact">
+          <span class="nav-link-indicator"></span>
+          <span>Contact</span>
+        </a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="nav-actions">
+        <div class="nav-icons-group">
+          <!-- Theme Toggle Button (Light / Dark Mode) -->
+          <button type="button" class="icon-tool-btn" id="theme-toggle-btn" title="Toggle Light / Dark Theme"
+            aria-label="Toggle Theme">
+            <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+          </button>
+          <button type="button" class="icon-tool-btn trigger-terminal" title="Launch Interactive Terminal (CLI)"
+            aria-label="Terminal Console">
+            <span class="material-symbols-outlined">terminal</span>
+          </button>
+          <a href="https://github.com/parth-5133" target="_blank" rel="noopener noreferrer" class="icon-tool-btn"
+            title="GitHub Profile" aria-label="GitHub">
+            <span class="material-symbols-outlined">code</span>
+          </a>
+        </div>
+
+        <button type="button" class="nav-resume-btn trigger-resume" id="header-resume-btn"
+          title="View Curriculum Vitae">
+          <span class="material-symbols-outlined">description</span>
+          <span>Resume</span>
+        </button>
+
+        <a href="#contact" class="nav-hire-btn" id="header-hire-btn">
+          <span>Hire Me</span>
+          <span class="material-symbols-outlined">arrow_outward</span>
+        </a>
+
+        <div class="nav-avatar" title="Parth Patel">
+          <img src="assets/profile-cutout.png" alt="Parth Patel">
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" id="mobile-toggle" class="mobile-toggle" aria-label="Toggle navigation menu"
+          aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Floating Mobile Drawer Card -->
+    <div id="mobile-drawer" class="mobile-drawer" aria-label="Mobile Navigation">
+      <div class="mobile-drawer-header">
+        <div class="mobile-brand-pill">
+          <span class="status-dot pulse"></span>
+          <span>Quick Navigation</span>
+        </div>
+      </div>
+
+      <div class="mobile-nav-list">
+        <a href="#hero" class="nav-link">
+          <span class="mobile-link-inner">
+            <span class="material-symbols-outlined">home</span>
+            <span>Home</span>
+          </span>
+          <span class="material-symbols-outlined chevron">chevron_right</span>
+        </a>
+        <a href="#about" class="nav-link">
+          <span class="mobile-link-inner">
+            <span class="material-symbols-outlined">person</span>
+            <span>About</span>
+          </span>
+          <span class="material-symbols-outlined chevron">chevron_right</span>
+        </a>
+        <a href="#skills" class="nav-link">
+          <span class="mobile-link-inner">
+            <span class="material-symbols-outlined">terminal</span>
+            <span>Technical Skills</span>
+          </span>
+          <span class="material-symbols-outlined chevron">chevron_right</span>
+        </a>
+        <a href="#services" class="nav-link">
+          <span class="mobile-link-inner">
+            <span class="material-symbols-outlined">design_services</span>
+            <span>Services &amp; Solutions</span>
+          </span>
+          <span class="material-symbols-outlined chevron">chevron_right</span>
+        </a>
+        <a href="#contact" class="nav-link">
+          <span class="mobile-link-inner">
+            <span class="material-symbols-outlined">mail</span>
+            <span>Get in Touch</span>
+          </span>
+          <span class="material-symbols-outlined chevron">chevron_right</span>
+        </a>
+      </div>
+
+      <div class="mobile-drawer-footer">
+        <button type="button" class="btn btn-secondary" id="mobile-theme-toggle-btn"
+          style="width: 100%; justify-content: space-between;">
+          <span style="display: inline-flex; align-items: center; gap: 8px;">
+            <span class="material-symbols-outlined" id="mobile-theme-icon">dark_mode</span>
+            <span id="mobile-theme-text">Dark Mode</span>
+          </span>
+          <span class="material-symbols-outlined" style="font-size: 16px; color: var(--text-muted);">swap_horiz</span>
+        </button>
+        <button type="button" class="btn btn-secondary trigger-resume" style="width: 100%;">
+          <span class="material-symbols-outlined">description</span>
+          <span>View Resume</span>
+        </button>
+        <a href="#contact" class="btn btn-primary" style="width: 100%;">
+          <span>Hire Me</span>
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================================
+         SECTION 1: HERO SECTION
+         ======================================================================== -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <!-- Left Hero Column -->
+        <div class="hero-content reveal">
+          <div class="availability-badge" id="hero-availability-badge">
+            <span class="pulse-ring"></span>
+            <span>AVAILABLE FOR FREELANCE & FULL-TIME</span>
+          </div>
+
+          <div class="hero-eyebrow">SYSTEM ARCHITECT &amp; BUILDER</div>
+
+          <h1 class="hero-title" id="hero-heading">
+            Hi, I'm Parth Patel<br>
+            <span class="gradient-text">Full Stack Developer</span>
+          </h1>
+
+          <p class="hero-desc" id="hero-description">
+            I build scalable, modern web applications with clean architecture and great user experiences. Specializing
+            in high-performance backends, reactive interfaces, and deterministic engineering.
+          </p>
+
+          <div class="hero-ctas" id="hero-cta-buttons">
+            <a href="#services" class="btn btn-primary btn-lg" id="hero-cta-work">
+              <span>Explore Services</span>
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+            <button type="button" class="btn btn-secondary btn-lg trigger-resume" id="hero-cta-resume">
+              <span class="material-symbols-outlined">download</span>
+              <span>Download Resume</span>
+            </button>
+          </div>
+
+          <div class="hero-social-row">
+            <div class="social-icons-group">
+              <a href="https://github.com/parth-5133" target="_blank" rel="noopener noreferrer" class="icon-btn" title="GitHub"
+                aria-label="GitHub">
+                <span class="material-symbols-outlined">code</span>
+              </a>
+              <a href="https://www.linkedin.com/in/patel-parth-9a3a88282" target="_blank" rel="noopener noreferrer" class="icon-btn" title="LinkedIn"
+                aria-label="LinkedIn">
+                <span class="material-symbols-outlined">hub</span>
+              </a>
+              <a href="mailto:patelparth5133@gmail.com" class="icon-btn copy-email-btn" title="Copy Email"
+                aria-label="Email">
+                <span class="material-symbols-outlined">mail</span>
+              </a>
+            </div>
+
+            <div class="ping-badge trigger-terminal" style="cursor: pointer;"
+              title="Click to open interactive terminal">
+              <span class="terminal-prompt">$</span>
+              <span>ping parth.dev — </span>
+              <span class="status-ping">12ms (healthy)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Column: Profile Card with Normal <img> Element -->
+        <div class="hero-visual reveal">
+          <div class="hero-card-glow" aria-hidden="true"></div>
+
+          <div class="profile-card-wrapper" id="hero-profile-card">
+            <!-- Profile Image Container with Standalone Cutout Portrait -->
+            <div class="profile-photo-container">
+              <img id="developer-profile-photo" src="assets/profile-cutout.png"
+                alt="Parth Patel - Full Stack Developer">
+              <div class="profile-vignette" aria-hidden="true"></div>
+            </div>
+
+            <!-- Floating Bottom-Left Experience Badge -->
+            <div class="float-badge-bottom" id="hero-experience-badge">
+              <div class="badge-icon">
+                <span class="material-symbols-outlined">verified</span>
+              </div>
+              <div>
+                <div class="badge-value">2+ Years Experience</div>
+                <div class="badge-sub">Full Stack Craft</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 2: ABOUT SECTION (ENGINEERING PHILOSOPHY & METRICS)
+         ======================================================================== -->
+    <section id="about" class="section section-alt">
+      <div class="container about-grid">
+        <!-- Left: Editorial Narrative -->
+        <div class="about-text-content reveal">
+          <div>
+            <div class="section-tag">
+              <span class="material-symbols-outlined">psychology</span>
+              <span>ENGINEERING PHILOSOPHY</span>
+            </div>
+            <h2 class="section-title">Turning Complex Architecture into Fast, Deterministic Web Software.</h2>
+          </div>
+
+          <p>
+            I am a Full Stack Developer with 2+ years of production experience building robust web applications,
+            high-throughput REST APIs, and responsive digital products. My core focus lies in architecting maintainable
+            software that scales smoothly under heavy operational loads.
+          </p>
+          <p>
+            From low-latency database queries and distributed queue workers in Laravel to reactive component trees in
+            modern JavaScript, I bridge the gap between heavy systems engineering and delightful user experiences.
+          </p>
+
+          <div>
+            <a href="#contact" class="btn-link" id="about-cta-link">
+              <span>Discuss Your Engineering Needs</span>
+              <span class="material-symbols-outlined">chevron_right</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: 4 Asymmetrical Metric Cards -->
+        <div class="metrics-grid reveal">
+          <div class="metric-card" id="metric-years">
+            <div class="metric-icon-box">
+              <span class="material-symbols-outlined">history</span>
+            </div>
+            <div>
+              <div class="metric-value">2+ Years</div>
+              <div class="metric-label">Full Stack Craft</div>
+              <div class="metric-sub">Production engineering across enterprise cloud &amp; on-prem environments.</div>
+            </div>
+          </div>
+
+          <div class="metric-card accent-mint" id="metric-projects">
+            <div class="metric-icon-box">
+              <span class="material-symbols-outlined">rocket_launch</span>
+            </div>
+            <div>
+              <div class="metric-value">40+</div>
+              <div class="metric-label">Projects Delivered</div>
+              <div class="metric-sub">From high-frequency IoT feeds to multi-tenant SaaS business suites.</div>
+            </div>
+          </div>
+
+          <div class="metric-card" id="metric-stacks">
+            <div class="metric-icon-box">
+              <span class="material-symbols-outlined">integration_instructions</span>
+            </div>
+            <div>
+              <div class="metric-value">15+</div>
+              <div class="metric-label">Core Tech Stacks</div>
+              <div class="metric-sub">Mastered across backend frameworks, reactive frontends, and automated CI/CD.</div>
+            </div>
+          </div>
+
+          <div class="metric-card accent-mint" id="metric-satisfaction">
+            <div class="metric-icon-box">
+              <span class="material-symbols-outlined">verified</span>
+            </div>
+            <div>
+              <div class="metric-value">100%</div>
+              <div class="metric-label">Client Satisfaction</div>
+              <div class="metric-sub">Rigorous delivery benchmarks, automated testing, and zero-defect deployments.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 3: TECHNICAL EXPERTISE & MODERN TOOLING (SKILLS)
+         ======================================================================== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header center reveal">
+          <div class="section-tag">
+            <span class="material-symbols-outlined">layers</span>
+            <span>CAPABILITIES</span>
+          </div>
+          <h2 class="section-title">Technical Expertise &amp; Modern Tooling</h2>
+          <p class="section-desc">Zero vanity metrics • Strictly production-tested technologies used in real-world
+            deployments.</p>
+        </div>
+
+        <!-- 4 Domain Grid -->
+        <div class="skills-grid reveal">
+          <!-- Backend & API -->
+          <div class="skill-category-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap">
+                <span class="material-symbols-outlined">dns</span>
+              </div>
+              <h3 class="skill-category-title">Backend &amp; API</h3>
+              <p class="skill-category-desc">Robust servers, clean MVC patterns, queue pipelines, and distributed event
+                architectures.</p>
+            </div>
+            <div class="skill-tags-wrap">
+              <span class="skill-tag">PHP 8.3</span>
+              <span class="skill-tag lead">Laravel (Lead)</span>
+              <span class="skill-tag">RESTful APIs</span>
+              <span class="skill-tag">Sanctum / JWT</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">WebSockets</span>
+            </div>
+          </div>
+
+          <!-- Frontend UI -->
+          <div class="skill-category-card mint">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap">
+                <span class="material-symbols-outlined">devices</span>
+              </div>
+              <h3 class="skill-category-title">Frontend UI</h3>
+              <p class="skill-category-desc">Performant, accessible user interfaces with clean styling and fluid
+                component lifecycles.</p>
+            </div>
+            <div class="skill-tags-wrap">
+              <span class="skill-tag">JavaScript ES6+</span>
+              <span class="skill-tag lead-mint">Vue.js / Inertia</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Tailwind CSS</span>
+              <span class="skill-tag">HTML5 / SCSS</span>
+              <span class="skill-tag">Alpine.js</span>
+            </div>
+          </div>
+
+          <!-- Data & Persistence -->
+          <div class="skill-category-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap">
+                <span class="material-symbols-outlined">database</span>
+              </div>
+              <h3 class="skill-category-title">Data &amp; Persistence</h3>
+              <p class="skill-category-desc">High-performance relational querying, caching strategies, and data
+                modeling.</p>
+            </div>
+            <div class="skill-tags-wrap">
+              <span class="skill-tag lead">MySQL (InnoDB)</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">Redis Cache</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">Eloquent ORM</span>
+              <span class="skill-tag">Meilisearch</span>
+            </div>
+          </div>
+
+          <!-- DevOps & Tooling -->
+          <div class="skill-category-card mint">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap">
+                <span class="material-symbols-outlined">tune</span>
+              </div>
+              <h3 class="skill-category-title">DevOps &amp; Tooling</h3>
+              <p class="skill-category-desc">Automated release pipelines, isolated container configurations, and cloud
+                deployment.</p>
+            </div>
+            <div class="skill-tags-wrap">
+              <span class="skill-tag lead-mint">Docker</span>
+              <span class="skill-tag">Git &amp; Actions</span>
+              <span class="skill-tag">Linux / Nginx</span>
+              <span class="skill-tag">Postman</span>
+              <span class="skill-tag">AWS S3 / EC2</span>
+              <span class="skill-tag">PHPUnit</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Continuous Marquee Ticker Strip -->
+        <div class="marquee-container reveal">
+          <div class="marquee-content">
+            <span class="marquee-item accent-green">• LARAVEL 11</span>
+            <span class="marquee-item">• PHP 8.3</span>
+            <span class="marquee-item accent-mint">• MYSQL CLUSTERS</span>
+            <span class="marquee-item">• TAILWIND CSS</span>
+            <span class="marquee-item accent-green">• DOCKER COMPOSE</span>
+            <span class="marquee-item">• WEBSOCKET CHANNELS</span>
+            <span class="marquee-item accent-mint">• VUE 3 / REACT</span>
+            <span class="marquee-item">• REDIS PUB/SUB</span>
+            <span class="marquee-item accent-green">• REST API DESIGN</span>
+            <span class="marquee-item">• NGINX MICRO-CACHING</span>
+            <!-- Duplicate loop for seamless infinite animation -->
+            <span class="marquee-item accent-green">• LARAVEL 11</span>
+            <span class="marquee-item">• PHP 8.3</span>
+            <span class="marquee-item accent-mint">• MYSQL CLUSTERS</span>
+            <span class="marquee-item">• TAILWIND CSS</span>
+            <span class="marquee-item accent-green">• DOCKER COMPOSE</span>
+            <span class="marquee-item">• WEBSOCKET CHANNELS</span>
+            <span class="marquee-item accent-mint">• VUE 3 / REACT</span>
+            <span class="marquee-item">• REDIS PUB/SUB</span>
+            <span class="marquee-item accent-green">• REST API DESIGN</span>
+            <span class="marquee-item">• NGINX MICRO-CACHING</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 4: SPECIALIZED DEVELOPMENT SERVICES
+         ======================================================================== -->
+    <section id="services" class="section section-alt">
+      <div class="container">
+        <div class="section-header-split reveal">
+          <div>
+            <div class="section-tag">
+              <span class="material-symbols-outlined">handshake</span>
+              <span>FOR CLIENTS &amp; FOUNDERS</span>
+            </div>
+            <h2 class="section-title">Specialized Development Services</h2>
+            <p class="section-desc">Tailored engineering services for fast-moving startups, scale-ups, and established
+              digital agencies.</p>
+          </div>
+          <a href="#contact" class="btn-link">
+            <span>Request a Project Quote</span>
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- 8 Services Grid -->
+        <div class="services-grid">
+          <div class="service-card reveal" id="service-card-fullstack">
+            <div class="service-icon-box">
+              <span class="material-symbols-outlined">web</span>
+            </div>
+            <h3 class="service-title">Full Stack Web Apps</h3>
+            <p class="service-desc">Complete end-to-end custom application development from data model design to
+              responsive frontend execution.</p>
+          </div>
+
+          <div class="service-card mint reveal" id="service-card-laravel">
+            <div class="service-icon-box">
+              <span class="material-symbols-outlined">code_blocks</span>
+            </div>
+            <h3 class="service-title">Custom Laravel Eng.</h3>
+            <p class="service-desc">Enterprise-grade Laravel development with robust domain architecture, service
+              providers, and background jobs.</p>
+          </div>
+
+          <div class="service-card reveal" id="service-card-api">
+            <div class="service-icon-box">
+              <span class="material-symbols-outlined">api</span>
+            </div>
+            <h3 class="service-title">RESTful API Design</h3>
+            <p class="service-desc">High-throughput, well-documented API services built for mobile backends, SaaS
+              integration, and microservices.</p>
+          </div>
+
+          <div class="service-card mint reveal" id="service-card-dashboards">
+            <div class="service-icon-box">
+              <span class="material-symbols-outlined">monitoring</span>
+            </div>
+            <h3 class="service-title">Dashboards &amp; Metrics</h3>
+            <p class="service-desc">Real-time telemetry displays, analytics consoles, and administrative panels with
+              WebSocket streaming.</p>
+          </div>
+
+          <div class="service-card reveal" id="service-card-db">
+            <div class="service-icon-box">
+              <span class="material-symbols-outlined">speed</span>
+            </div>
+            <h3 class="service-title">Database Optimization</h3>
+            <p class="service-desc">Query profiling, indexing, schema restructuring, and Redis caching implementations
+              to eliminate slow bottlenecks.</p>
+          </div>
+
+          <div class="service-card mint reveal" id="service-card-audit">
+            <div class="service-icon-box">
+              <span class="material-symbols-outlined">build_circle</span>
+            </div>
+            <h3 class="service-title">Code Audits &amp; Fixes</h3>
+            <p class="service-desc">Comprehensive codebase health check, security vulnerability remediation, and
+              tech-debt refactoring.</p>
+          </div>
+
+          <div class="service-card reveal" id="service-card-modernize">
+            <div class="service-icon-box">
+              <span class="material-symbols-outlined">update</span>
+            </div>
+            <h3 class="service-title">App Modernization</h3>
+            <p class="service-desc">Upgrading legacy PHP/Laravel codebases to current release standards with zero
+              downtime and strict parity.</p>
+          </div>
+
+          <div class="service-card mint reveal" id="service-card-cloud">
+            <div class="service-icon-box">
+              <span class="material-symbols-outlined">cloud_sync</span>
+            </div>
+            <h3 class="service-title">Cloud &amp; VPS Hosting</h3>
+            <p class="service-desc">Dockerizing applications, setting up Nginx reverse proxies, SSL certificates, and
+              configuring resilient Linux servers.</p>
+          </div>
+        </div>
+
+        <!-- Services Hook Banner -->
+        <div class="services-hook-banner reveal">
+          <div class="banner-left">
+            <div class="banner-icon">
+              <span class="material-symbols-outlined">schedule</span>
+            </div>
+            <div>
+              <div class="banner-title">Have a project or deadline in mind?</div>
+              <div class="banner-desc">Let's discuss your timeline, specs, and engineering milestones.</div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary">Let's Talk</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 7: WHY TEAMS & CLIENTS PARTNER WITH ME
+         ======================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header center reveal">
+          <div class="section-tag">
+            <span class="material-symbols-outlined">verified_user</span>
+            <span>DEV CREDENTIALS</span>
+          </div>
+          <h2 class="section-title">Why Teams &amp; Clients Partner With Me</h2>
+          <p class="section-desc">Beyond writing code, I bring ownership, predictable velocity, and senior engineering
+            clarity to your roadmap.</p>
+        </div>
+
+        <div class="credentials-grid">
+          <div class="credential-card reveal">
+            <div class="credential-header">
+              <span class="material-symbols-outlined">clean_hands</span>
+              <span>Clean &amp; Maintainable Code</span>
+            </div>
+            <p class="credential-desc">Strict adherence to DRY, SOLID, and separation of concerns so your team can
+              extend features without breaking existing flows.</p>
+          </div>
+
+          <div class="credential-card mint reveal">
+            <div class="credential-header">
+              <span class="material-symbols-outlined">chat</span>
+              <span>Direct Communication</span>
+            </div>
+            <p class="credential-desc">Daily asynchronous progress reports, proactive risk identification, and
+              transparent timeline estimates without fluff.</p>
+          </div>
+
+          <div class="credential-card reveal">
+            <div class="credential-header">
+              <span class="material-symbols-outlined">network_node</span>
+              <span>Scalable Foundations</span>
+            </div>
+            <p class="credential-desc">Architecting systems prepared for 10x user growth with caching, queued jobs, and
+              efficient database indexing from Day 1.</p>
+          </div>
+
+          <div class="credential-card mint reveal">
+            <div class="credential-header">
+              <span class="material-symbols-outlined">lightbulb</span>
+              <span>Problem Solver First</span>
+            </div>
+            <p class="credential-desc">I don't just write tickets blindly; I evaluate business requirements to suggest
+              the most cost-efficient and performant solution.</p>
+          </div>
+
+          <div class="credential-card reveal">
+            <div class="credential-header">
+              <span class="material-symbols-outlined">timer</span>
+              <span>Strict Delivery Dates</span>
+            </div>
+            <p class="credential-desc">Disciplined milestone planning and sprint execution. Delivering working software
+              on the promised deadline is non-negotiable.</p>
+          </div>
+
+          <div class="credential-card mint reveal">
+            <div class="credential-header">
+              <span class="material-symbols-outlined">support</span>
+              <span>Post-Launch Support</span>
+            </div>
+            <p class="credential-desc">Dedicated post-deployment monitoring, warranty bug-fixes, and thorough technical
+              documentation for smooth handover.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 8: RECRUITER RESUME CALLOUT
+         ======================================================================== -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="recruiter-callout-card reveal">
+          <div class="recruiter-info">
+            <span class="recruiter-badge">HIRING RECRUITERS &amp; TECH LEADS</span>
+            <h2 class="recruiter-title">Looking for a seasoned Full Stack Engineer?</h2>
+            <p class="recruiter-desc">
+              Download my updated developer CV with full project breakdowns, technical references, and architectural
+              credentials. Available for immediate interview scheduling.
+            </p>
+          </div>
+          <div class="recruiter-actions">
+            <button type="button" class="btn btn-primary trigger-resume" id="recruiter-cv-download">
+              <span class="material-symbols-outlined">download</span>
+              <span>Download Resume (PDF)</span>
+            </button>
+            <a href="#contact" class="btn btn-secondary">Schedule Intro Call</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 9: INTERACTIVE CONTACT FORM & DIRECT CHANNELS
+         ======================================================================== -->
+    <section id="contact" class="section section-alt">
+      <div class="container contact-grid">
+        <!-- Left: Direct Channels -->
+        <div class="contact-info-col reveal">
+          <div>
+            <div class="section-tag">
+              <span class="material-symbols-outlined">alternate_email</span>
+              <span>GET IN TOUCH</span>
+            </div>
+            <h2 class="section-title">Let's Build Something Exceptional Together.</h2>
+            <p class="section-desc">
+              Have a product to build, an existing system to optimize, or an engineering role to fill? Reach out and
+              I'll get back to you within 24 hours.
+            </p>
+          </div>
+
+          <div class="contact-channels">
+            <div class="channel-card copy-email-btn" style="cursor: pointer;" title="Click to copy email address">
+              <div class="channel-icon">
+                <span class="material-symbols-outlined">mail</span>
+              </div>
+              <div class="channel-details">
+                <div class="channel-label">Direct Email (Click to copy)</div>
+                <span class="channel-val">patelparth5133@gmail.com</span>
+              </div>
+            </div>
+
+            <div class="channel-card">
+              <div class="channel-icon mint">
+                <span class="material-symbols-outlined">schedule</span>
+              </div>
+              <div class="channel-details">
+                <div class="channel-label">Location &amp; Working Hours</div>
+                <div class="channel-val">UTC+5:30 (IST) • Global Remote Flexible</div>
+              </div>
+            </div>
+
+            <div class="channel-card">
+              <div class="channel-icon">
+                <span class="material-symbols-outlined">hub</span>
+              </div>
+              <div class="channel-details">
+                <div class="channel-label">Professional Networks</div>
+                <div class="social-links-inline">
+                  <a href="https://github.com/parth-5133" target="_blank" rel="noopener noreferrer">GitHub</a>
+                  <span>•</span>
+                  <a href="https://www.linkedin.com/in/patel-parth-9a3a88282" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Contact Form -->
+        <div class="contact-form-card reveal">
+          <!-- Form Header -->
+          <div class="contact-form-header">
+            <div class="form-header-title">
+              <div class="form-header-badge">
+                <span class="material-symbols-outlined">terminal</span>
+                <span>DIRECT INQUIRY</span>
+              </div>
+              <h3 class="form-header-heading">Send a Proposal</h3>
+            </div>
+            <div class="form-status-indicator">
+              <span class="status-dot pulse"></span>
+              <span class="status-text">Average response: &lt; 24 hrs</span>
+            </div>
+          </div>
+
+          <!-- Quick Service Selection Chips -->
+          <div class="quick-inquiry-section">
+            <div class="quick-inquiry-label">Select Project Scope:</div>
+            <div class="quick-inquiry-chips" id="quick-inquiry-chips">
+              <button type="button" class="inquiry-chip is-active" data-value="project">
+                <span class="material-symbols-outlined">layers</span>
+                <span>Full Stack App</span>
+              </button>
+              <button type="button" class="inquiry-chip" data-value="laravel">
+                <span class="material-symbols-outlined">database</span>
+                <span>Laravel / Backend</span>
+              </button>
+              <button type="button" class="inquiry-chip" data-value="audit">
+                <span class="material-symbols-outlined">speed</span>
+                <span>Performance Audit</span>
+              </button>
+              <button type="button" class="inquiry-chip" data-value="role">
+                <span class="material-symbols-outlined">badge</span>
+                <span>Full-time / Contract</span>
+              </button>
+            </div>
+          </div>
+
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">
+                  <span>Your Name</span>
+                  <span class="req-star">*</span>
+                </label>
+                <div class="input-with-icon">
+                  <span class="material-symbols-outlined input-icon">person</span>
+                  <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Morgan" required>
+                </div>
+                <span class="form-error-msg">Please enter your name (at least 2 characters).</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">
+                  <span>Email Address</span>
+                  <span class="req-star">*</span>
+                </label>
+                <div class="input-with-icon">
+                  <span class="material-symbols-outlined input-icon">mail</span>
+                  <input type="email" id="contact-email" class="form-input" placeholder="e.g. alex@company.com"
+                    required>
+                </div>
+                <span class="form-error-msg">Please enter a valid email address.</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-inquiry" class="form-label">
+                  <span>Inquiry Category</span>
+                </label>
+                <div class="select-with-icon">
+                  <span class="material-symbols-outlined input-icon">category</span>
+                  <select id="contact-inquiry" class="form-select">
+                    <option value="project">New Full Stack Project</option>
+                    <option value="laravel">Custom Laravel Engineering</option>
+                    <option value="audit">Code Audit / Performance Optimization</option>
+                    <option value="role">Full-Time / Contract Engineering Role</option>
+                    <option value="custom">Other Consultation</option>
+                  </select>
+                  <span class="material-symbols-outlined select-arrow">expand_more</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-budget" class="form-label">
+                  <span>Estimated Budget / Scope</span>
+                </label>
+                <div class="select-with-icon">
+                  <span class="material-symbols-outlined input-icon">payments</span>
+                  <select id="contact-budget" class="form-select">
+                    <option value="hourly" selected>Hourly Based</option>
+                    <option value="fixed">Fixed Price Based</option>
+                    <option value="monthly">Monthly Salary Based</option>
+                  </select>
+                  <span class="material-symbols-outlined select-arrow">expand_more</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-label-row">
+                <label for="contact-message" class="form-label">
+                  <span>Project Details &amp; Objectives</span>
+                  <span class="req-star">*</span>
+                </label>
+                <span class="char-count" id="message-char-count">0 / 1000</span>
+              </div>
+              <div class="textarea-wrapper">
+                <textarea id="contact-message" class="form-textarea"
+                  placeholder="Describe your project goals, timelines, current tech stack, or engineering specs..."
+                  maxlength="1000" required></textarea>
+              </div>
+              <span class="form-error-msg">Please provide at least 10 characters detailing your request.</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit" id="contact-submit-btn">
+              <span class="material-symbols-outlined btn-submit-icon">send</span>
+              <span class="btn-submit-text">Send Message</span>
+              <span class="material-symbols-outlined btn-submit-arrow">arrow_forward</span>
+            </button>
+
+            <!-- Trust & Assurance Banner -->
+            <div class="form-trust-banner">
+              <div class="trust-item">
+                <span class="material-symbols-outlined">lock</span>
+                <span>100% Confidential</span>
+              </div>
+              <span class="trust-dot">•</span>
+              <div class="trust-item">
+                <span class="material-symbols-outlined">mark_email_read</span>
+                <span>Direct Inbox</span>
+              </div>
+              <span class="trust-dot">•</span>
+              <div class="trust-item">
+                <span class="material-symbols-outlined">verified</span>
+                <span>No Spam Guarantee</span>
+              </div>
+            </div>
+
+            <div id="form-feedback" class="form-feedback-banner"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <!-- Top Glowing Accent Beam -->
+    <div class="footer-glow-bar"></div>
+
+    <div class="container">
+      <!-- Main Footer Grid -->
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Bio -->
+        <div class="footer-col footer-col-brand">
+          <a href="#" class="footer-brand-header">
+            <div class="brand-monogram">
+              <span class="monogram-bracket">&lt;</span>
+              <span class="monogram-text">P</span>
+              <span class="monogram-slash">/</span>
+              <span class="monogram-bracket">&gt;</span>
+            </div>
+            <div class="footer-brand-title">
+              <div class="footer-brand-name">Parth Patel</div>
+              <div class="footer-brand-subtitle">Full Stack Developer</div>
+            </div>
+          </a>
+
+          <p class="footer-bio">
+            Engineering resilient backend architectures, robust Laravel &amp; MySQL systems, and reactive interfaces
+            with deterministic precision.
+          </p>
+
+          <div class="footer-status-pill">
+            <span class="status-dot pulse"></span>
+            <span>Available for Freelance &amp; Full-Time</span>
+          </div>
+
+          <div class="footer-social-row">
+            <a href="https://github.com/parth-5133" target="_blank" rel="noopener noreferrer" class="footer-social-btn"
+              title="GitHub" aria-label="GitHub Profile">
+              <svg class="social-svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/patel-parth-9a3a88282" target="_blank" rel="noopener noreferrer" class="footer-social-btn"
+              title="LinkedIn" aria-label="LinkedIn Profile">
+              <svg class="social-svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+            <button type="button" class="footer-social-btn copy-email-btn" title="Copy Email Address"
+              aria-label="Copy Email">
+              <span class="material-symbols-outlined">mail</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-menu">
+            <li><a href="#home" class="footer-link"><span
+                  class="material-symbols-outlined">home</span><span>Home</span></a></li>
+            <li><a href="#about" class="footer-link"><span
+                  class="material-symbols-outlined">person</span><span>About</span></a></li>
+            <li><a href="#skills" class="footer-link"><span class="material-symbols-outlined">code</span><span>Skills
+                  &amp; Stack</span></a></li>
+            <li><a href="#services" class="footer-link"><span
+                  class="material-symbols-outlined">design_services</span><span>Services</span></a></li>
+            <li><a href="#contact" class="footer-link"><span class="material-symbols-outlined">mail</span><span>Get in
+                  Touch</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Core Competencies -->
+        <div class="footer-col">
+          <div class="footer-col-title">Core Stack</div>
+          <div class="footer-tags">
+            <span class="footer-tag-item">Laravel 11</span>
+            <span class="footer-tag-item">PHP 8.3</span>
+            <span class="footer-tag-item">MySQL / InnoDB</span>
+            <span class="footer-tag-item">RESTful APIs</span>
+            <span class="footer-tag-item">Vue.js / Inertia</span>
+            <span class="footer-tag-item">Docker</span>
+            <span class="footer-tag-item">Redis</span>
+            <span class="footer-tag-item">Tailwind CSS</span>
+          </div>
+        </div>
+
+        <!-- Col 4: Quick Action & Interactive Tools -->
+        <div class="footer-col footer-col-actions">
+          <div class="footer-col-title">Interactive Tools</div>
+          <p class="footer-action-desc">Explore built-in interactive tools in this portfolio:</p>
+          <div class="footer-action-buttons">
+            <button type="button" class="footer-tool-btn trigger-terminal">
+              <span class="material-symbols-outlined">terminal</span>
+              <span>Launch CLI Terminal</span>
+            </button>
+            <button type="button" class="footer-tool-btn trigger-resume">
+              <span class="material-symbols-outlined">description</span>
+              <span>View Full Resume</span>
+            </button>
+            <a href="#contact" class="footer-hire-cta">
+              <span>Start a Project</span>
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <span class="copyright">© 2026 Parth Patel. All rights reserved.</span>
+          <span class="footer-sep">•</span>
+          <span class="footer-note">Designed &amp; Developed by Parth Patel</span>
+        </div>
+
+        <div class="footer-bottom-right">
+          <button type="button" class="footer-back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            aria-label="Back to top">
+            <span>Back to top</span>
+            <span class="material-symbols-outlined">arrow_upward</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" id="back-to-top" class="back-to-top-btn" title="Back to top" aria-label="Back to top">
+    <span class="material-symbols-outlined">expand_less</span>
+  </button>
+
+  <!-- ========================================================================
+       RESUME PREVIEW MODAL
+       ======================================================================== -->
+  <div id="resume-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Parth Patel Resume">
+    <div class="modal-content">
+      <button type="button" class="modal-close-btn" id="close-resume-modal" aria-label="Close resume modal">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div style="border-bottom: 1px solid var(--border-subtle); padding-bottom: 20px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <h2 style="font-family: var(--font-display); font-size: 26px; font-weight: 700;">Parth Patel</h2>
+              <div style="color: var(--primary); font-family: var(--font-mono); font-size: 13px; margin-top: 4px;">Full
+                Stack Developer • 2+ Years Experience</div>
+            </div>
+            <button type="button" class="btn btn-primary btn-sm" onclick="window.print()">
+              <span class="material-symbols-outlined" style="font-size: 16px;">print</span>
+              <span>Print / Save PDF</span>
+            </button>
+          </div>
+          <div
+            style="font-size: 13px; color: var(--text-secondary); margin-top: 10px; display: flex; flex-wrap: wrap; gap: 16px;">
+            <span>Email: patelparth5133@gmail.com</span>
+            <span>Location: Remote (IST/UTC+5:30)</span>
+            <span>GitHub: github.com/parth-5133</span>
+          </div>
+        </div>
+
+        <div>
+          <h3
+            style="font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">
+            Executive Summary</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: var(--text-secondary);">
+            Full Stack Developer specializing in Laravel, PHP 8.3, relational database optimization, and reactive
+            JavaScript interfaces. Proven record architecting SaaS platforms, high-throughput IoT telemetry monitors,
+            and secure fintech payment reconciliations.
+          </p>
+        </div>
+
+        <div>
+          <h3
+            style="font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">
+            Core Competencies</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <span class="skill-tag lead">Laravel (Lead)</span>
+            <span class="skill-tag">PHP 8.3</span>
+            <span class="skill-tag">MySQL (InnoDB)</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">Redis Pub/Sub</span>
+            <span class="skill-tag lead-mint">Vue 3 / Inertia</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">RESTful API Design</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">PHPUnit</span>
+            <span class="skill-tag">WebSockets</span>
+            <span class="skill-tag">Linux / Nginx</span>
+          </div>
+        </div>
+
+        <div>
+          <h3
+            style="font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">
+            Experience Snapshot</h3>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <div>
+              <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 15px;">
+                <span>Full Stack Developer — TechVanguard Systems</span>
+                <span style="font-family: var(--font-mono); font-size: 12px; color: var(--primary);">2023 —
+                  Present</span>
+              </div>
+              <p style="font-size: 13px; color: var(--text-secondary); margin-top: 4px;">
+                Architecting core SaaS APIs, cutting p95 response times by 81% via Redis caching &amp; asynchronous
+                jobs.
+              </p>
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 15px;">
+                <span>Associate Web Developer — AeroByte Digital</span>
+                <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-secondary);">2022 —
+                  2023</span>
+              </div>
+              <p style="font-size: 13px; color: var(--text-secondary); margin-top: 4px;">
+                Built dynamic web applications, client portals, payment gateways, and managed MySQL schema migrations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       INTERACTIVE TERMINAL DRAWER
+       ======================================================================== -->
+  <div id="terminal-modal" class="modal-overlay terminal-modal" role="dialog" aria-modal="true"
+    aria-label="Interactive Developer Console">
+    <div class="modal-content">
+      <button type="button" class="modal-close-btn" id="close-terminal-modal" aria-label="Close terminal">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+
+      <div class="cli-window">
+        <div
+          style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 10px; margin-bottom: 14px; display: flex; align-items: center; gap: 10px;">
+          <div class="window-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+          <span style="font-size: 12px; color: var(--text-secondary);">parth@dev-cluster:~ (interactive terminal)</span>
+        </div>
+
+        <div class="cli-output" id="cli-output">
+          <div>Welcome to Parth Patel's interactive terminal v2.6.</div>
+          <div>Type <span style="color: var(--primary); font-weight: 600;">help</span> to see available commands or
+            <span style="color: var(--secondary); font-weight: 600;">skills</span> to view tech stack.</div>
+          <div style="margin-bottom: 10px;">--------------------------------------------------</div>
+        </div>
+
+        <div class="cli-prompt-line">
+          <span>visitor@parth.dev:~$</span>
+          <input type="text" id="cli-input" class="cli-input" placeholder="type a command..." autocomplete="off"
+            spellcheck="false">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pure Vanilla JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
