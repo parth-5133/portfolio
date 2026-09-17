@@ -4535,21 +4535,3 @@ ol {
     will-change: auto !important;
   }
 }
-
-transform: translateY(0);
-}
-
-/* Subtle variant for section headers and captions */
-.reveal-subtle {
-  transform: translateY(16px);
-}
-
-/* Reduced motion preference for accessibility */
-@media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-    will-change: auto !important;
-  }
-}
