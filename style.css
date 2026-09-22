@@ -4291,30 +4291,69 @@ ol {
   transform: translateX(3px);
 }
 
-/* Footer Bottom Bar */
-.footer-bottom {
+/* ==========================================================================
+   Footer Big Statement Typography & Ambient Glow ("LET'S WORK TOGETHER")
+   ========================================================================== */
+.footer-hero-banner {
+  position: relative;
+  width: 100%;
+  padding-top: 48px;
+  padding-bottom: 36px;
+  margin-top: 40px;
+  border-top: none;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  justify-content: space-between;
   align-items: center;
-  padding-top: 24px;
+  justify-content: center;
+  background: linear-gradient(180deg, transparent 0%, rgba(34, 197, 94, 0.03) 100%);
 }
 
-@media (min-width: 768px) {
-  .footer-bottom {
-    flex-direction: row;
-  }
+[data-theme="dark"] .footer-hero-banner {
+  background: linear-gradient(180deg, transparent 0%, rgba(34, 197, 94, 0.05) 100%);
 }
 
-.footer-bottom-left {
+/* Atmospheric Radiant Glow Orb */
+.footer-hero-glow {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  max-width: 90vw;
+  height: 180px;
+  background: radial-gradient(ellipse at 50% 60%, rgba(34, 197, 94, 0.26) 0%, rgba(13, 148, 136, 0.14) 42%, rgba(0, 0, 0, 0) 75%);
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(32px);
+}
+
+[data-theme="light"] .footer-hero-glow {
+  background: radial-gradient(ellipse at 50% 60%, rgba(21, 128, 61, 0.14) 0%, rgba(13, 148, 136, 0.06) 42%, rgba(248, 250, 252, 0) 75%);
+}
+
+.footer-banner-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer-copyright-center {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 8px;
-  font-family: var(--font-mono);
-  font-size: 11px;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 13px;
   color: var(--text-muted);
+  text-align: center;
+  letter-spacing: 0.01em;
 }
 
 .footer-sep {
@@ -4329,35 +4368,69 @@ ol {
   color: var(--text-muted);
 }
 
-.footer-bottom-right {
+/* Big Typography Track */
+.footer-big-text-track {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
 }
 
-.footer-back-to-top {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  background: transparent;
-  border: none;
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-  font-size: 11px;
-  cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 4px;
-  transition: color 0.2s ease, transform 0.2s ease;
+.footer-big-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 5.6vw, 5.6rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: block;
+  line-height: 1.1;
+
+  /* Modern Glassy / Metallic Stroke & Gradient Fill matching the reference */
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.06) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.22);
+  transition: all var(--transition-base);
 }
 
-.footer-back-to-top .material-symbols-outlined {
-  font-size: 14px;
+[data-theme="light"] .footer-big-text {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.28) 0%, rgba(15, 23, 42, 0.04) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgba(15, 23, 42, 0.14);
 }
 
-.footer-back-to-top:hover {
-  color: var(--primary);
-  transform: translateY(-2px);
+@media (max-width: 768px) {
+  .footer-hero-banner {
+    padding-top: 32px;
+    padding-bottom: 24px;
+    margin-top: 24px;
+  }
+  .footer-copyright-center {
+    font-size: 12px;
+    gap: 6px;
+  }
+  .footer-hero-glow {
+    height: 120px;
+    width: 90%;
+  }
+  .footer-big-text {
+    font-size: clamp(1.2rem, 5.2vw, 2.6rem);
+    letter-spacing: 0.03em;
+    -webkit-text-stroke-width: 0.75px;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -4472,8 +4545,8 @@ ol {
 /* Floating Back To Top Button */
 .back-to-top-btn {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  bottom: 92px;
+  right: 28px;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -4483,7 +4556,7 @@ ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
   z-index: 90;
   opacity: 0;
   pointer-events: none;
@@ -4502,6 +4575,133 @@ ol {
   color: var(--text-inverse);
   box-shadow: var(--shadow-glow);
   transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   Floating WhatsApp Button & Ripple Pulse Animation
+   ========================================================================== */
+.whatsapp-float-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  color: #FFFFFF !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45), 0 2px 10px rgba(0, 0, 0, 0.18);
+  z-index: 99;
+  text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.whatsapp-float-btn .whatsapp-icon {
+  width: 32px;
+  height: 32px;
+  fill: #FFFFFF;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+/* Pulsing Ripple Effect */
+.whatsapp-float-ripple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: #25D366;
+  opacity: 0.6;
+  z-index: 1;
+  animation: whatsapp-pulse 2.2s infinite ease-out;
+  pointer-events: none;
+}
+
+@keyframes whatsapp-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.38);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.38);
+    opacity: 0;
+  }
+}
+
+/* Hover & Focus Interactions */
+.whatsapp-float-btn:hover {
+  background-color: #20BA56;
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 10px 32px rgba(37, 211, 102, 0.65), 0 4px 14px rgba(0, 0, 0, 0.25);
+  color: #FFFFFF !important;
+}
+
+.whatsapp-float-btn:hover .whatsapp-icon {
+  transform: scale(1.08) rotate(4deg);
+}
+
+.whatsapp-float-btn:active {
+  transform: scale(0.96);
+}
+
+/* Floating Tooltip Pill */
+.whatsapp-float-badge {
+  position: absolute;
+  right: 68px;
+  white-space: nowrap;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-card);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.whatsapp-float-btn:hover .whatsapp-float-badge {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+@media (max-width: 640px) {
+  .whatsapp-float-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 52px;
+    height: 52px;
+  }
+  .whatsapp-float-btn .whatsapp-icon {
+    width: 28px;
+    height: 28px;
+  }
+  .back-to-top-btn {
+    bottom: 82px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+  }
+  .whatsapp-float-badge {
+    display: none;
+  }
 }
 
 /* --------------------------------------------------------------------------
