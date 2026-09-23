@@ -297,10 +297,10 @@
               <span>Explore Services</span>
               <span class="material-symbols-outlined">arrow_forward</span>
             </a>
-            <button type="button" class="btn btn-secondary btn-lg trigger-resume" id="hero-cta-resume">
+            <a href="assets/CURRICULUM_VITAE_PARTH.pdf" download="CURRICULUM_VITAE_PARTH.pdf" target="_blank" class="btn btn-secondary btn-lg" id="hero-cta-resume">
               <span class="material-symbols-outlined">download</span>
               <span>Download Resume</span>
-            </button>
+            </a>
           </div>
 
           <div class="hero-social-row">
@@ -1210,10 +1210,10 @@
             </p>
           </div>
           <div class="recruiter-actions">
-            <button type="button" class="btn btn-primary trigger-resume" id="recruiter-cv-download">
+            <a href="assets/CURRICULUM_VITAE_PARTH.pdf" download="CURRICULUM_VITAE_PARTH.pdf" target="_blank" class="btn btn-primary" id="recruiter-cv-download">
               <span class="material-symbols-outlined">download</span>
               <span>Download Resume (PDF)</span>
-            </button>
+            </a>
             <a href="#contact" class="btn btn-secondary">Schedule Intro Call</a>
           </div>
         </div>
@@ -1604,92 +1604,40 @@
        RESUME PREVIEW MODAL
        ======================================================================== -->
   <div id="resume-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Parth Patel Resume">
-    <div class="modal-content">
+    <div class="modal-content" style="max-width: 920px; width: 95%; max-height: 90vh; padding: 24px; display: flex; flex-direction: column;">
       <button type="button" class="modal-close-btn" id="close-resume-modal" aria-label="Close resume modal">
         <span class="material-symbols-outlined">close</span>
       </button>
 
-      <div style="display: flex; flex-direction: column; gap: 24px;">
-        <div style="border-bottom: 1px solid var(--border-subtle); padding-bottom: 20px;">
-          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
-            <div>
-              <h2 style="font-family: var(--font-display); font-size: 26px; font-weight: 700;">Parth Patel</h2>
-              <div style="color: var(--primary); font-family: var(--font-mono); font-size: 13px; margin-top: 4px;">Full
-                Stack Developer • 2+ Years Experience</div>
-            </div>
-            <button type="button" class="btn btn-primary btn-sm" onclick="window.print()">
-              <span class="material-symbols-outlined" style="font-size: 16px;">print</span>
-              <span>Print / Save PDF</span>
-            </button>
+      <div style="border-bottom: 1px solid var(--border-subtle); padding-bottom: 16px; margin-bottom: 16px; padding-right: 48px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <h2 style="font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--text-primary); margin: 0;">Parth Patel — Curriculum Vitae</h2>
+            <div style="color: var(--primary); font-family: var(--font-mono); font-size: 13px; margin-top: 4px;">PHP Developer • 2+ Years Professional Experience</div>
           </div>
-          <div
-            style="font-size: 13px; color: var(--text-secondary); margin-top: 10px; display: flex; flex-wrap: wrap; gap: 16px;">
-            <span>Phone: +91 6355048196</span>
-            <span>Email: patelparth5133@gmail.com</span>
-            <span>Location: Remote (IST/UTC+5:30)</span>
-            <span>GitHub: github.com/parth-5133</span>
+          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+            <a href="assets/CURRICULUM_VITAE_PARTH.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 6px;">
+              <span class="material-symbols-outlined" style="font-size: 16px;">open_in_new</span>
+              <span>Open in Tab</span>
+            </a>
+            <a href="assets/CURRICULUM_VITAE_PARTH.pdf" download="CURRICULUM_VITAE_PARTH.pdf" class="btn btn-primary btn-sm" style="display: inline-flex; align-items: center; gap: 6px;">
+              <span class="material-symbols-outlined" style="font-size: 16px;">download</span>
+              <span>Download PDF</span>
+            </a>
           </div>
         </div>
+      </div>
 
-        <div>
-          <h3
-            style="font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">
-            Executive Summary</h3>
-          <p style="font-size: 14px; line-height: 1.6; color: var(--text-secondary);">
-            Full Stack Developer specializing in Laravel, PHP 8.3, relational database optimization, and reactive
-            JavaScript interfaces. Proven record architecting SaaS platforms, high-throughput IoT telemetry monitors,
-            and secure fintech payment reconciliations.
-          </p>
-        </div>
-
-        <div>
-          <h3
-            style="font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">
-            Core Competencies</h3>
-          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-            <span class="skill-tag lead">Laravel (Lead)</span>
-            <span class="skill-tag">PHP 8.3</span>
-            <span class="skill-tag">MySQL (InnoDB)</span>
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">Redis Pub/Sub</span>
-            <span class="skill-tag lead-mint">Vue 3 / Inertia</span>
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">RESTful API Design</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">PHPUnit</span>
-            <span class="skill-tag">WebSockets</span>
-            <span class="skill-tag">Linux / Nginx</span>
+      <div style="flex: 1; width: 100%; min-height: 520px; height: 68vh; border-radius: var(--radius-lg); overflow: hidden; background: #525659; border: 1px solid var(--border-card);">
+        <iframe src="assets/CURRICULUM_VITAE_PARTH.pdf" style="width: 100%; height: 100%; border: none;" title="Parth Patel Resume PDF">
+          <div style="padding: 40px 20px; text-align: center; color: #fff;">
+            <p style="font-size: 16px; margin-bottom: 16px;">Your browser does not support inline PDF viewing.</p>
+            <a href="assets/CURRICULUM_VITAE_PARTH.pdf" download="CURRICULUM_VITAE_PARTH.pdf" class="btn btn-primary">
+              <span class="material-symbols-outlined">download</span>
+              <span>Download CURRICULUM_VITAE_PARTH.pdf</span>
+            </a>
           </div>
-        </div>
-
-        <div>
-          <h3
-            style="font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">
-            Experience Snapshot</h3>
-          <div style="display: flex; flex-direction: column; gap: 14px;">
-            <div>
-              <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 15px;">
-                <span>Full Stack Developer — TechVanguard Systems</span>
-                <span style="font-family: var(--font-mono); font-size: 12px; color: var(--primary);">2023 —
-                  Present</span>
-              </div>
-              <p style="font-size: 13px; color: var(--text-secondary); margin-top: 4px;">
-                Architecting core SaaS APIs, cutting p95 response times by 81% via Redis caching &amp; asynchronous
-                jobs.
-              </p>
-            </div>
-            <div>
-              <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 15px;">
-                <span>Associate Web Developer — AeroByte Digital</span>
-                <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-secondary);">2022 —
-                  2023</span>
-              </div>
-              <p style="font-size: 13px; color: var(--text-secondary); margin-top: 4px;">
-                Built dynamic web applications, client portals, payment gateways, and managed MySQL schema migrations.
-              </p>
-            </div>
-          </div>
-        </div>
+        </iframe>
       </div>
     </div>
   </div>
