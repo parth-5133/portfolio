@@ -2064,6 +2064,18 @@ ol {
   }
 }
 
+@media (min-width: 540px) and (max-width: 767px) {
+  #locations .metrics-grid .metric-card:last-child {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 768px) {
+  #locations .metrics-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .metric-card {
   padding: 24px;
   border-radius: var(--radius-xl);
