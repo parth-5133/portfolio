@@ -284,7 +284,7 @@ ol {
 }
 
 /* --------------------------------------------------------------------------
-   Atmospheric Background Glows
+   Atmospheric Background Glows & Parallax
    -------------------------------------------------------------------------- */
 .ambient-glows {
   position: fixed;
@@ -294,12 +294,21 @@ ol {
   overflow: hidden;
 }
 
+.ambient-parallax-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
 .ambient-orb {
   position: absolute;
   border-radius: 50%;
   filter: blur(140px);
   opacity: 0.35;
   animation: ambientFloat 14s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
 [data-theme="dark"] .ambient-orb {
@@ -311,25 +320,38 @@ ol {
   left: -100px;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(34, 197, 94, 0.15) 0%, rgba(34, 197, 94, 0) 70%);
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.16) 0%, rgba(34, 197, 94, 0) 70%);
 }
 
 .orb-2 {
-  top: 40%;
+  top: 36%;
   right: -120px;
   width: 520px;
   height: 520px;
-  background: radial-gradient(circle, rgba(52, 211, 153, 0.12) 0%, rgba(52, 211, 153, 0) 70%);
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.14) 0%, rgba(52, 211, 153, 0) 70%);
   animation-delay: -5s;
 }
 
 .orb-3 {
   bottom: -150px;
-  left: 30%;
+  left: 28%;
   width: 680px;
   height: 500px;
-  background: radial-gradient(circle, rgba(34, 197, 94, 0.08) 0%, rgba(34, 197, 94, 0) 70%);
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.10) 0%, rgba(34, 197, 94, 0) 70%);
   animation-delay: -9s;
+}
+
+.orb-4 {
+  top: 68%;
+  left: -80px;
+  width: 560px;
+  height: 560px;
+  background: radial-gradient(circle, rgba(13, 148, 136, 0.12) 0%, rgba(13, 148, 136, 0) 70%);
+  animation-delay: -12s;
+}
+
+[data-theme="dark"] .orb-4 {
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.16) 0%, rgba(52, 211, 153, 0) 70%);
 }
 
 @keyframes ambientFloat {
@@ -2122,6 +2144,30 @@ ol {
   color: var(--text-primary);
   letter-spacing: -0.02em;
   line-height: 1.1;
+}
+
+.counter-number {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  will-change: contents;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.counter-number.counter-finished {
+  animation: counterPulse 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes counterPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .metric-label {

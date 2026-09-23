@@ -42,6 +42,146 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
+     1.1 Parallax Background Glow Effect (Scroll & Organic Depth)
+     -------------------------------------------------------------------------- */
+  const parallaxLayers = document.querySelectorAll('.ambient-parallax-layer');
+  if (parallaxLayers.length > 0 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let targetScrollY = window.scrollY;
+    let currentScrollY = targetScrollY;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    let currentMouseX = 0;
+    let currentMouseY = 0;
+    let isParallaxRunning = false;
+
+    // Smooth physics loop for ambient parallax
+    const renderParallax = () => {
+      const scrollDelta = targetScrollY - currentScrollY;
+      const mouseDeltaX = targetMouseX - currentMouseX;
+      const mouseDeltaY = targetMouseY - currentMouseY;
+
+      // Smooth interpolation
+      currentScrollY += scrollDelta * 0.08;
+      currentMouseX += mouseDeltaX * 0.05;
+      currentMouseY += mouseDeltaY * 0.05;
+
+      parallaxLayers.forEach((layer) => {
+        const speedY = parseFloat(layer.getAttribute('data-speed-y') || '0');
+        const speedX = parseFloat(layer.getAttribute('data-speed-x') || '0');
+        const mouseFactor = parseFloat(layer.getAttribute('data-mouse') || '20');
+
+        const y = (currentScrollY * speedY) + (currentMouseY * mouseFactor);
+        const x = (currentScrollY * speedX) + (currentMouseX * mouseFactor);
+
+        layer.style.transform = `translate3d(${x.toFixed(2)}px, ${y.toFixed(2)}px, 0)`;
+      });
+
+      // Keep running while moving; sleep when settled to preserve CPU & battery
+      if (Math.abs(scrollDelta) > 0.1 || Math.abs(mouseDeltaX) > 0.002 || Math.abs(mouseDeltaY) > 0.002) {
+        requestAnimationFrame(renderParallax);
+      } else {
+        isParallaxRunning = false;
+      }
+    };
+
+    const wakeParallax = () => {
+      if (!isParallaxRunning) {
+        isParallaxRunning = true;
+        requestAnimationFrame(renderParallax);
+      }
+    };
+
+    // Track scroll
+    window.addEventListener('scroll', () => {
+      targetScrollY = window.scrollY;
+      wakeParallax();
+    }, { passive: true });
+
+    // Track subtle mouse movement on desktop
+    if (window.matchMedia('(pointer: fine)').matches) {
+      window.addEventListener('mousemove', (e) => {
+        const halfW = window.innerWidth / 2;
+        const halfH = window.innerHeight / 2;
+        targetMouseX = (e.clientX - halfW) / halfW;
+        targetMouseY = (e.clientY - halfH) / halfH;
+        wakeParallax();
+      }, { passive: true });
+    }
+
+    // Initial render
+    wakeParallax();
+  }
+
+  /* --------------------------------------------------------------------------
+     1.2 On-Scroll Counter Animation (Interactive Metric Numbers)
+     -------------------------------------------------------------------------- */
+  const counterElements = document.querySelectorAll('.counter-number');
+
+  if (counterElements.length > 0) {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const animateCounter = (el) => {
+      const rawTarget = el.getAttribute('data-target') || el.textContent;
+      const target = parseFloat(rawTarget);
+      if (isNaN(target)) return;
+
+      const isInteger = Number.isInteger(target);
+      const duration = 1400; // 1.4 seconds
+      const startTime = performance.now();
+
+      if (prefersReducedMotion) {
+        el.textContent = target.toString();
+        el.classList.add('counter-finished');
+        return;
+      }
+
+      el.textContent = '0';
+
+      const updateCount = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Smooth cubic-out easing curve (starts briskly, smoothly settles)
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const currentVal = easeOut * target;
+
+        if (isInteger) {
+          el.textContent = Math.round(currentVal);
+        } else {
+          el.textContent = currentVal.toFixed(1);
+        }
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCount);
+        } else {
+          el.textContent = target.toString();
+          el.classList.add('counter-finished');
+        }
+      };
+
+      requestAnimationFrame(updateCount);
+    };
+
+    if ('IntersectionObserver' in window) {
+      const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      counterElements.forEach((el) => counterObserver.observe(el));
+    } else {
+      counterElements.forEach((el) => animateCounter(el));
+    }
+  }
+
+  /* --------------------------------------------------------------------------
      2. Navigation: Sticky Header, Mobile Drawer & ScrollSpy
      -------------------------------------------------------------------------- */
   const header = document.getElementById('main-header');
